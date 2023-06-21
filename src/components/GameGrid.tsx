@@ -13,7 +13,7 @@ function GameGrid() {
       {error ? <Text>{error}</Text> : null}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
-        spacing={7}
+        spacing={5}
         padding={3}
       >
         {isLoading &&
