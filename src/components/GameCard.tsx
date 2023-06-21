@@ -13,7 +13,9 @@ function GameCard({ game }: Props) {
 
   return (
     <Card>
-      <Image src={getCroppedImageUrl(background_image)} />
+      <Image
+        src={background_image ? getCroppedImageUrl(background_image) : ''}
+      />
       <CardBody>
         <Heading fontSize="2xl">{name}</Heading>
         <HStack justifyContent="space-between">
