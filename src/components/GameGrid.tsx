@@ -17,23 +17,22 @@ function GameGrid({ gameQuery }: Props) {
     return <Text>No data</Text>;
   }
 
+  if (error) return <Text>{error}</Text>;
+
   return (
-    <>
-      {error ? <Text>{error}</Text> : null}
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={5} pr={5}>
-        {isLoading &&
-          skeletons?.map((skeleton) => (
-            <GameCardContainer key={skeleton}>
-              <GameCardSkeleton />
-            </GameCardContainer>
-          ))}
-        {data?.map((game) => (
-          <GameCardContainer key={game.id}>
-            <GameCard game={game} />
+    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={5} pr={5}>
+      {isLoading &&
+        skeletons?.map((skeleton) => (
+          <GameCardContainer key={skeleton}>
+            <GameCardSkeleton />
           </GameCardContainer>
         ))}
-      </SimpleGrid>
-    </>
+      {data?.map((game) => (
+        <GameCardContainer key={game.id}>
+          <GameCard game={game} />
+        </GameCardContainer>
+      ))}
+    </SimpleGrid>
   );
 }
 
