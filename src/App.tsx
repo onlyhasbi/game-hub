@@ -8,6 +8,7 @@ import { Platform } from './hooks/useGames';
 import PlatformSelector from './components/PlatformSelector';
 import SortSelector from './components/SortSelector';
 import SearchInput from './components/SearchInput';
+import GameHeading from './components/GameHeading';
 import './app.css';
 
 export interface GameQuery {
@@ -48,7 +49,8 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <HStack spacing={3} mb={5}>
+        <GameHeading gameQuery={gameQuery} />
+        <HStack spacing={3} marginY={5}>
           <PlatformSelector
             onSelectPlatform={(platform) =>
               setGameQuery({ ...gameQuery, platform })
@@ -62,6 +64,7 @@ function App() {
             }
           />
         </HStack>
+
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
