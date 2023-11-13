@@ -1,4 +1,4 @@
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Box, Grid, GridItem } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 

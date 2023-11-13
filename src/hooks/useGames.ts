@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { Platform } from './usePlatforms';
+import { Platform } from '../types/Platform';
 import ApiClient, { FetchResponse } from '../services/api-client';
 import useGameQuery from '../store/useGameQuery';
 
@@ -8,6 +8,7 @@ import ms from 'ms';
 export interface Game {
   id: number;
   name: string;
+  slug: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
@@ -21,7 +22,7 @@ const useGames = () => {
   return useInfiniteQuery<FetchResponse<Game>, Error>({
     queryKey: ['games', gameQuery],
     queryFn: ({ pageParam = 1 }) =>
-      apiClient.get({
+      apiClient.getAll({
         params: {
           genres: gameQuery.genreId,
           parent_platforms: gameQuery.platformId,
