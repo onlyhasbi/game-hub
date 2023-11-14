@@ -28,6 +28,10 @@ function GameDetailPage() {
       gameDetail={{
         name: data?.name,
         description_raw: data?.description_raw,
+        platforms: data.platforms,
+        genres: data.genres,
+        metacritic: data.metacritic,
+        publishers: data.publishers,
       }}
     />
   ) : null;
