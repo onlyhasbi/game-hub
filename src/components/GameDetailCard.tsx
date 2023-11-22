@@ -1,9 +1,9 @@
-import { Card, Heading } from '@chakra-ui/react';
+import { GridItem, Heading, SimpleGrid, VStack } from '@chakra-ui/react';
 import { Game } from '../types/Game';
 import ExpandableText from './ExpandableText';
 import GameAttributes from './GameAttributes';
-import GameTrailer from './GameTrailer';
 import GameScreenshoot from './GameScreenshoot';
+import GameTrailer from './GameTrailer';
 
 type Props = {
   game: Game;
@@ -11,13 +11,19 @@ type Props = {
 
 function GameDetailCard({ game }: Props) {
   return (
-    <Card padding={5}>
-      <Heading>{game.name}</Heading>
-      <ExpandableText>{game.description_raw}</ExpandableText>
-      <GameAttributes game={game} />
-      <GameTrailer gameId={game.id} />
-      <GameScreenshoot gameId={game.id} />
-    </Card>
+      <SimpleGrid columns={{ md: 2 }} spacing={10} padding={10}>
+        <GridItem>
+          <Heading>{game.name}</Heading>
+          <ExpandableText>{game.description_raw}</ExpandableText>
+          <GameAttributes game={game} />
+        </GridItem>
+        <GridItem order={{ md: 0 }}>
+          <VStack gap={5}>
+            <GameTrailer gameId={game.id} />
+            <GameScreenshoot gameId={game.id} />
+          </VStack>
+        </GridItem>
+      </SimpleGrid>
   );
 }
 

@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <HStack padding="10px">
-      <Image src={logo} boxSize="60px" />
+      <Image cursor="pointer" src={logo} objectFit="cover" boxSize="60px" />
       <SearchInput onSearch={setSearchText} />
       <ColorModeSwitch />
     </HStack>
