@@ -1,5 +1,5 @@
 import { GridItem, Heading, SimpleGrid, VStack } from '@chakra-ui/react';
-import { Game } from '../types/Game';
+import Game  from '../types/Game';
 import ExpandableText from './ExpandableText';
 import GameAttributes from './GameAttributes';
 import GameScreenshoot from './GameScreenshoot';
