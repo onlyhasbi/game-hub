@@ -1,18 +1,22 @@
 import { Card, Heading } from '@chakra-ui/react';
-import { GameDetail } from '../types/GameDetail';
+import { Game } from '../types/Game';
 import ExpandableText from './ExpandableText';
 import GameAttributes from './GameAttributes';
+import GameTrailer from './GameTrailer';
+import GameScreenshoot from './GameScreenshoot';
 
 type Props = {
-  gameDetail: GameDetail;
+  game: Game;
 };
 
-function GameDetailCard({ gameDetail }: Props) {
+function GameDetailCard({ game }: Props) {
   return (
     <Card padding={5}>
-      <Heading>{gameDetail.name}</Heading>
-      <ExpandableText>{gameDetail.description_raw}</ExpandableText>
-      <GameAttributes game={gameDetail}/>
+      <Heading>{game.name}</Heading>
+      <ExpandableText>{game.description_raw}</ExpandableText>
+      <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
+      <GameScreenshoot gameId={game.id} />
     </Card>
   );
 }

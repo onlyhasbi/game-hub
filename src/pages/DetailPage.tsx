@@ -25,7 +25,8 @@ function GameDetailPage() {
 
   return isSuccess ? (
     <GameDetailCard
-      gameDetail={{
+      game={{
+        id: data?.id,
         name: data?.name,
         description_raw: data?.description_raw,
         platforms: data.platforms,
