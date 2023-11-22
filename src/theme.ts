@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
-
-const config: ThemeConfig = {
-  initialColorMode: 'dark',
-};
-
-const theme = extendTheme({
-=======
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 
 const config: ThemeConfig = {
@@ -14,7 +5,6 @@ const config: ThemeConfig = {
 };
 
 const theme = extendTheme({ 
->>>>>>> main
   config,
   colors: {
     gray: {
@@ -27,17 +17,9 @@ const theme = extendTheme({
       600: '#6c6c6c',
       700: '#202020',
       800: '#121212',
-<<<<<<< HEAD
-      900: '#111',
-    },
-  },
-});
-export default theme;
-=======
       900: '#111'
     }
   }
  });
 
 export default theme;
->>>>>>> main

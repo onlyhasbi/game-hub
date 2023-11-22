@@ -1,14 +1,4 @@
 import genres from '../data/genres';
-<<<<<<< HEAD
-
-export interface Genre {
-  id: number;
-  name: string;
-  image_background: string;
-}
-
-const useGenres = () => ({ data: genres, isLoading: false, error: null });
-=======
 import ApiClient from '../services/api-client';
 import ms from 'ms'
 import { useQuery } from '@tanstack/react-query';
@@ -23,6 +13,5 @@ const useGenres = () =>
     staleTime: ms('24h'),
     initialData: genres,
   });
->>>>>>> main
 
 export default useGenres;

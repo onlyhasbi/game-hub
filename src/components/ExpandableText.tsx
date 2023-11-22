@@ -9,7 +9,7 @@ function ExpandableText({ children }: Props) {
   const [expand, setExpand] = useState(false);
   const CHAR_LIMIT = 500;
   const text = expand ? children : children.substring(0, CHAR_LIMIT) + '...';
-  const textButton = expand ? 'Show More' : 'Show Less';
+  const textButton = !expand ? 'Show More' : 'Show Less';
 
   if (!children) return null;
 

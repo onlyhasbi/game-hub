@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import useData from './useData';
-
-interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
-
-const usePlatforms = () => useData<Platform>('/platforms/lists/parents');
-=======
 import platforms from '../data/platforms';
 import ApiClient from '../services/api-client';
 import ms from 'ms'
@@ -24,6 +13,5 @@ const usePlatforms = () =>
     staleTime: ms('24h'),
     initialData: platforms
   });
->>>>>>> main
 
 export default usePlatforms;

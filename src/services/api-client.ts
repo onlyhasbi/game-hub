@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import axios from 'axios';
-
-export default axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL,
-  params: {
-    key: import.meta.env.VITE_API_KEY,
-  },
-});
-=======
 import axios, { AxiosRequestConfig } from 'axios';
 
 export interface FetchResponse<T> {
@@ -41,4 +31,3 @@ class ApiClient<T> {
 }
 
 export default ApiClient;
->>>>>>> main
