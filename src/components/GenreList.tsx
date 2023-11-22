@@ -5,7 +5,7 @@ import {
   Image,
   List,
   ListItem,
-  Spinner
+  Spinner,
 } from '@chakra-ui/react';
 import useGenres from '../hooks/useGenres';
 import getCroppedImageUrl from '../services/image-url';

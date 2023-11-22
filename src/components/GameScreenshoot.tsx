@@ -1,5 +1,4 @@
 import { GridItem, Image, SimpleGrid } from '@chakra-ui/react';
-import React from 'react';
 import useScreenshots from '../hooks/useScreenshoot';
 
 type Props = {

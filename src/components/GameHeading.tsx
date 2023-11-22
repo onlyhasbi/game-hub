@@ -6,7 +6,7 @@ import useGameQuery from '../store/useGameQuery';
 const GameHeading = () => {
   const genreId = useGameQuery((s) => s.gameQuery.genreId);
   const genre = useGenre(genreId);
-  
+
   const platformId = useGameQuery((s) => s.gameQuery.platformId);
   const platform = usePlatform(platformId);
 
